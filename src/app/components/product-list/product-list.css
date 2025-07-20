@@ -1,0 +1,136 @@
+/* Estilos sencillos para la tabla de productos */
+:host {
+  display: block;
+  padding: 20px;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Tabla PrimeNG */
+:host ::ng-deep .p-datatable {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Headers de la tabla */
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 12px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Columnas ordenables */
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th.p-sortable-column {
+  cursor: pointer;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th.p-sortable-column:hover {
+  background-color: #e9ecef;
+}
+
+/* Filas de datos */
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr {
+  border-bottom: 1px solid #f1f3f4;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #f8f9fa;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  padding: 12px;
+  border: none;
+  color: #495057;
+}
+
+/* Imágenes */
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td img {
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+/* Paginador */
+:host ::ng-deep .p-paginator {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 12px;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+  border: 1px solid #dee2e6;
+  margin: 0 2px;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page:hover {
+  background-color: #e9ecef;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+/* Botones de navegación */
+:host ::ng-deep .p-paginator .p-paginator-first,
+:host ::ng-deep .p-paginator .p-paginator-prev,
+:host ::ng-deep .p-paginator .p-paginator-next,
+:host ::ng-deep .p-paginator .p-paginator-last {
+  border: 1px solid #dee2e6;
+  margin: 0 2px;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-first:hover,
+:host ::ng-deep .p-paginator .p-paginator-prev:hover,
+:host ::ng-deep .p-paginator .p-paginator-next:hover,
+:host ::ng-deep .p-paginator .p-paginator-last:hover {
+  background-color: #e9ecef;
+}
+
+/* Loading */
+:host ::ng-deep .p-datatable.p-datatable-loading {
+  opacity: 0.7;
+}
+
+/* Mensaje de tabla vacía */
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td.text-center {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Inputs de filtro */
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th input {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :host {
+    padding: 16px;
+  }
+  
+  :host ::ng-deep .p-datatable .p-datatable-thead > tr > th,
+  :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
